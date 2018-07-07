@@ -1,11 +1,14 @@
 <odoo>
 	<data>
+	
+	<!-- Hereda el Wizard de "Libro de Compras" -->
         <record id="wizard_libro_diario" model="ir.ui.view">
                 <field name="name" >Libro Diario</field>
                 <field name="model">account.report.general.ledger</field>
                 <field name="inherit_id" ref="account.account_common_report_view"/>
             </record>
         
+	<!-- Declara la accion generada por el Item "Libro Diario" -->
             <record id="action_wizard_libro_diario" model="ir.actions.act_window">
                 <field name="name">Libro Diario</field>
                 <field name="res_model">account.report.general.ledger</field>
@@ -15,7 +18,8 @@
                 <field name="view_id" ref="wizard_libro_diario"/>
                 <field name="target">new</field>
             </record>
-        
+		
+        <!-- Coloca Item "Libro Diario" en menu "Informes PDF" -->
             <menuitem 
               id="impuestos_libro_compras" 
               name="Libro Diario" 
