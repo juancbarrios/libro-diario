@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+        <record id="wizard_libro_diario" model="ir.ui.view">
+                <field name="name" >Libro Diario</field>
+                <field name="model">account.report.general.ledger</field>
+                <field name="inherit_id" ref="account.account_common_report_view"/>
+            </record>
+        
+            <record id="action_wizard_libro_diario" model="ir.actions.act_window">
+                <field name="name">Libro Diario</field>
+                <field name="res_model">account.report.general.ledger</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="wizard_libro_diario"/>
+                <field name="target">new</field>
+            </record>
+        
+            <menuitem 
+              id="impuestos_libro_compras" 
+              name="Libro Diario" 
+              parent="account.menu_finance_legal_statement" 
+              action="action_wizard_libro_diario"
+            />
+    </data>
+</odoo>
