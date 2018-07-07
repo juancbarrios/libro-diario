@@ -76,6 +76,7 @@
             </t>
         </template>
 
+        <!-- Reemplaza el modelo impreso por "report_generalledger" y utiliza la plantilla "new_report_template" para imprimir los datos-->
         <template id="report_general_lendger_custom" inherit_id="account.report_generalledger">
             <t t-call="report.html_container" position="replace">
                 <t t-call="report.html_container">
